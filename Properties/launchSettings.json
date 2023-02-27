@@ -1,0 +1,22 @@
+﻿{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:12634",
+      "sslPort": 44365
+    }
+  },
+  "profiles": {
+    "dumplings": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:7238;http://localhost:5085",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy",
+        "GOOGLE_APPLICATION_CREDENTIALS":"C:\\project\\dumplings\\dumpling-backend-fbdf0ac677f9.json"
+      }
+    }
+  }
+}

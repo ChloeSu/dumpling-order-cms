@@ -33,7 +33,7 @@ namespace dumplingsOrderBackend.Repositories
             Query query = _db.Collection(collectionName);
             QuerySnapshot querySnapshot = await query.GetSnapshotAsync();
             return querySnapshot
-                    .Where(x => !x.TryGetValue<bool>("isDelete",out bool isDelete))
+                    .Where(x => x.TryGetValue<bool>("isDelete",out bool isDelete) && !isDelete)
                     .Select(x => _mapper.Map<TDto>(x)).ToList();
         }
         public async Task<TDto> GetByIdAsync(string key)
